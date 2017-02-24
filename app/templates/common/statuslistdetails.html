@@ -1,0 +1,46 @@
+<div class="accordion-cont row">
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-10 col-det-left">
+				<div class="row">
+					<div class="col-lg-3">
+						<a href="" ng-click="openItemDetail('md', listitem, listitem.details.ft)" ng-class="listitem.meta.state == 'Pending' ? 'pending-asset' : 'assets-item'">
+							<img ng-src="{{listitem.details.ft.img_url}}" title="{{listitem.details.ft.title}}" />
+						</a>
+					</div>
+					<div class="col-lg-3">
+						<a href="" ng-click="openItemDetail('md', listitem, listitem.details.Metrics)" ng-class="listitem.meta.state == 'Pending' ? 'pending-asset' : 'assets-item'">
+							<img ng-src="{{listitem.details.Metrics.img_url}}" title="{{listitem.details.Metrics.title}}" />
+						</a>
+					</div>
+					<div class="col-lg-3">
+						<a href="" ng-click="openItemDetail('md', listitem, listitem.details.Build)" ng-class="listitem.meta.state == 'Pending' ? 'pending-asset' : 'assets-item'">
+							<img ng-src="{{listitem.details.Build.img_url}}" title="{{listitem.details.Build.title}}" />
+						</a>
+					</div>
+					<div class="col-lg-3">
+						<a href="" ng-click="openItemDetail('md', listitem, listitem.details.ut)" ng-class="listitem.meta.state == 'Pending' ? 'pending-asset' : 'assets-item'">
+							<img ng-src="{{listitem.details.ut.img_url}}" title="{{listitem.details.ut.title}}" />
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="col-lg-2">
+				<div class="row">
+					<div class="col-lg-12 col-result">
+						<p>Result</p>
+						<div class="change-status change-{{listitem.meta.state | lowercase}}" ng-if="listitem.meta.state != 'Complete'">
+							Change {{listitem.meta.state}}
+						</div>
+						<div class="change-status change-{{listitem.meta.state | lowercase}}" ng-if="listitem.meta.state == 'Complete'">
+							{{listitem.meta.state}}
+						</div>
+						<div class="change-result change-{{listitem.meta.state | lowercase}}" ng-if="listitem.meta.result != ''">
+							{{listitem.meta.result}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

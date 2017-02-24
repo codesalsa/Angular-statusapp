@@ -1,0 +1,57 @@
+<uib-accordion-heading>
+	<div class="row">
+		<div class="col-lg-7 col-headers">
+			<div class="row">
+				<div ng-if="listitem.title == ''">
+					<div class="col-lg-1 head-item item-icon text-left">
+						<i class="ico ico-{{listitem.meta.state | lowercase}} ico-{{listitem.type | lowercase}}"></i>
+					</div>
+					<div class="col-lg-3 head-item item-title text-left">
+			    		{{listitem.id}}
+			    	</div>
+				</div>
+				<div ng-if="listitem.title != ''">
+					<div class="col-lg-1 head-item item-icon text-left">
+						<i class="ico ico-{{listitem.meta.state | lowercase}} ico-{{listitem.type | lowercase}}"></i>
+					</div>
+					<div class="col-lg-3 head-item item-title text-left">
+			    		{{listitem.title}}
+			    	</div>
+				</div>
+		    	<div class="col-lg-2 head-item item-owner text-center">
+		    		{{listitem.owner}}
+		    	</div>
+		    	<div class="col-lg-4 head-item item-time text-center">
+		    		{{listitem.meta.time_started}}
+		    	</div>
+		    	<div class="col-lg-2 head-item item-state text-center">
+		    		{{listitem.meta.state}}
+		    	</div>
+			</div>
+		</div>
+		<div class="col-lg-5 col-status">
+			<div class="row">
+				<div class="col-lg-3 status-box status-metrics">
+					<span class="box">
+						<span class="box-{{listitem.details.ft.status | lowercase}}" style="width:{{listitem.details.ft.progress | lowercase}}%;"></span>
+					</span>
+				</div>
+				<div class="col-lg-3 status-box status-build">
+					<span class="box">
+						<span class="box-{{listitem.details.Metrics.status | lowercase}}" style="width:{{listitem.details.Metrics.progress | lowercase}}%;"></span>
+					</span>
+				</div>
+				<div class="col-lg-3 status-box status-utest">
+					<span class="box">
+						<span class="box-{{listitem.details.Build.status | lowercase}}" style="width:{{listitem.details.Build.progress | lowercase}}%;"></span>
+					</span>
+				</div>
+				<div class="col-lg-3 status-box status-ftest">
+					<span class="box">
+						<span class="box-{{listitem.details.ut.status | lowercase}}" style="width:{{listitem.details.ut.progress | lowercase}}%;"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</uib-accordion-heading>

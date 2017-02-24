@@ -1,0 +1,258 @@
+body{
+	overflow-y:scroll;
+}
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+$pending-color:#cdcecf;
+$running-color:#4c85b7;
+$rejected-color:#bc0008;
+$complete-color:#568e31;
+$accepted-color:#669844;
+
+
+@mixin panel-gradient($begin_color, $middle_color, $end_color) {
+	background: $begin_color;
+
+	background: -moz-linear-gradient(left, $begin_color 0%, $middle_color 50%, $end_color 100%);
+	background: -webkit-linear-gradient(left, $begin_color 0%,$middle_color 50%,$end_color 100%);
+
+	background: -o-linear-gradient(left, $begin_color 0%,$middle_color 50%,$end_color 100%);
+	background: -ms-linear-gradient(left, $begin_color 0%,$middle_color 50%,$end_color 100%);
+}
+
+@mixin image-shadow($hl, $vl, $br, $color){
+	-webkit-box-shadow: $hl $vl $br $color;
+	-moz-box-shadow: $hl $vl $br $color;
+	box-shadow: $hl $vl $br $color;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.main-container {
+    margin: 70px auto;
+} 
+
+.ico {
+    background: #000;
+    display: block;
+    height: 32px;
+    width: 32px;
+    background:url("../imgs/status_icon.png") no-repeat scroll 0 0 / 100% auto;
+}
+.ico-build.ico-pending{
+	background-position:0 0;
+}
+.ico-build.ico-complete{
+	background-position:0 -143px;
+}
+.ico-firewall.ico-running{
+	background-position:0 -47px;
+}
+.ico-firewall.ico-rejected{
+	background-position:0 -96px;
+}
+.ico-firewall.ico-accepted{
+	background-position:0 -243px;
+}
+
+.panel-default {
+    margin: 0 0 10px;
+
+    .panel-heading{
+    	padding:0;
+
+    	.panel-title a.accordion-toggle{
+    		display: block;
+    		padding: 10px 15px;
+    		outline:0;
+    	}
+    }
+}
+.panel-heading{
+	background: none !important;
+	border: none !important;
+}
+.panel-pending{
+	
+	border:2px solid $pending-color;
+	@include panel-gradient(#ecf0f8, #f5f7fb, #feffff);
+	
+	.panel-heading{
+		color: $pending-color;
+	}
+}
+.panel-running{
+
+	border:2px solid $running-color;
+	@include panel-gradient(#ecf0f8, #f5f7fb, #feffff);
+
+	.panel-heading{
+		color: $running-color;
+	}
+}
+.panel-rejected{
+
+	border:2px solid $rejected-color;
+	@include panel-gradient(#fde9e9, #fdf6f6, #feffff);
+	color: $rejected-color;
+	.panel-heading{
+		color: $rejected-color;
+	}
+}
+.panel-complete{
+
+	border:2px solid $complete-color;
+	@include panel-gradient(#ecf2ea, #f7faf7, #feffff);
+
+	.panel-heading{
+		color: $complete-color;
+	}
+}
+.panel-accepted{
+
+	border:2px solid $accepted-color;
+	@include panel-gradient(#ecf2ea, #f7faf7, #feffff);
+
+	.panel-heading{
+		color: $accepted-color;
+	}
+}
+
+.head-item{
+	line-height:30px;
+}
+.panel-body{
+	border:none !important;
+}
+.col-status .status-box .box{
+	background: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    display: block;
+    height: 32px;
+    margin: 0 auto;
+    width: 50px;
+    position:relative;
+	
+	span{
+		position:absolute;
+		height:100%;
+		left:0;
+		top:0;
+		background:red;
+	}
+	.box-0{background:$pending-color}
+	.box-1{background:$running-color}
+	.box-2{background:$rejected-color}
+	.box-3{background:$complete-color}
+}
+.panel-head {
+    font-size: 16px;
+    margin: 0 -15px 8px;
+}
+.col-result {
+    font-size: 16px;
+    margin: 10px 0 0;
+    text-align: center;
+}
+.change-status{
+	font-size:20px;
+	margin:0 0 15px;
+}
+.change-running{
+	color:$running-color;;
+}
+.change-rejected{
+	color:$rejected-color;
+}
+.change-complete{
+	color:$complete-color;
+}
+.change-accepted{
+	color:#fcbd25
+}
+.change-pending{
+	color:$pending-color;
+}
+.change-result{
+	font-size:34px;
+}
+.change-result.change-accepted{
+	color:#fcbd25;
+}
+
+.pending-asset{
+	position:relative;
+	overflow:hidden;
+	display:block;
+}
+.pending-asset::after{
+	position:absolute;
+	left:0;
+	top:0;
+	width:97%;
+	height:400px;
+	background:rgba(255,255,255,0.5);
+	content:'';
+}
+
+.modal-body {
+    width: 100%;
+    display: table;
+
+    .modal-con-left{
+	    width: 35%;
+	    float: left;
+	}
+	.modal-con-right{
+	    width: 62%;
+	    float: right;
+	    font-size:18px;
+
+	    span {
+		    width: 100%;
+		    float: left;
+		    margin: 8px 0;
+
+		    strong{
+		    	color:#000;
+		    }
+		}
+		.block-result{
+		    text-align: center;
+		    font-size: 27px;
+		    margin: 25px 0 0;
+		}
+	}
+}
+.modal-pending{
+	
+	color: $pending-color;
+}
+.modal-running{
+
+	color: $running-color;
+}
+.modal-rejected{
+
+	color: $rejected-color;
+}
+.modal-complete{
+
+	color: $complete-color;
+}
+.modal-accepted{
+
+	color: $accepted-color;
+
+	.block-result{
+		color:#fcbd25;
+	}
+}
+
+.assets-item img{
+    @include image-shadow(1px, 1px, 8px, rgba(0,0,0,0.6));
+}

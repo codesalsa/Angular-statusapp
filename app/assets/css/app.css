@@ -1,0 +1,347 @@
+/* line 1, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+body {
+  overflow-y: scroll;
+}
+
+/* line 30, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+/* line 35, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.main-container {
+  margin: 70px auto;
+}
+
+/* line 39, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.ico {
+  background: #000;
+  display: block;
+  height: 32px;
+  width: 32px;
+  background: url("../imgs/status_icon.png") no-repeat scroll 0 0/100% auto;
+}
+
+/* line 46, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.ico-build.ico-pending {
+  background-position: 0 0;
+}
+
+/* line 49, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.ico-build.ico-complete {
+  background-position: 0 -143px;
+}
+
+/* line 52, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.ico-firewall.ico-running {
+  background-position: 0 -47px;
+}
+
+/* line 55, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.ico-firewall.ico-rejected {
+  background-position: 0 -96px;
+}
+
+/* line 58, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.ico-firewall.ico-accepted {
+  background-position: 0 -243px;
+}
+
+/* line 62, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-default {
+  margin: 0 0 10px;
+}
+
+/* line 65, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-default .panel-heading {
+  padding: 0;
+}
+
+/* line 68, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-default .panel-heading .panel-title a.accordion-toggle {
+  display: block;
+  padding: 10px 15px;
+  outline: 0;
+}
+
+/* line 75, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-heading {
+  background: none !important;
+  border: none !important;
+}
+
+/* line 79, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-pending {
+  border: 2px solid #cdcecf;
+  background: #ecf0f8;
+  background: -moz-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+  background: -webkit-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+  background: -o-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+  background: -ms-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+}
+
+/* line 84, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-pending .panel-heading {
+  color: #cdcecf;
+}
+
+/* line 88, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-running {
+  border: 2px solid #4c85b7;
+  background: #ecf0f8;
+  background: -moz-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+  background: -webkit-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+  background: -o-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+  background: -ms-linear-gradient(left, #ecf0f8 0%, #f5f7fb 50%, #feffff 100%);
+}
+
+/* line 93, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-running .panel-heading {
+  color: #4c85b7;
+}
+
+/* line 97, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-rejected {
+  border: 2px solid #bc0008;
+  background: #fde9e9;
+  background: -moz-linear-gradient(left, #fde9e9 0%, #fdf6f6 50%, #feffff 100%);
+  background: -webkit-linear-gradient(left, #fde9e9 0%, #fdf6f6 50%, #feffff 100%);
+  background: -o-linear-gradient(left, #fde9e9 0%, #fdf6f6 50%, #feffff 100%);
+  background: -ms-linear-gradient(left, #fde9e9 0%, #fdf6f6 50%, #feffff 100%);
+  color: #bc0008;
+}
+
+/* line 102, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-rejected .panel-heading {
+  color: #bc0008;
+}
+
+/* line 106, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-complete {
+  border: 2px solid #568e31;
+  background: #ecf2ea;
+  background: -moz-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+  background: -webkit-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+  background: -o-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+  background: -ms-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+}
+
+/* line 111, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-complete .panel-heading {
+  color: #568e31;
+}
+
+/* line 115, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-accepted {
+  border: 2px solid #669844;
+  background: #ecf2ea;
+  background: -moz-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+  background: -webkit-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+  background: -o-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+  background: -ms-linear-gradient(left, #ecf2ea 0%, #f7faf7 50%, #feffff 100%);
+}
+
+/* line 120, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-accepted .panel-heading {
+  color: #669844;
+}
+
+/* line 125, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.head-item {
+  line-height: 30px;
+}
+
+/* line 128, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-body {
+  border: none !important;
+}
+
+/* line 131, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-status .status-box .box {
+  background: #d8d8d8;
+  border: 1px solid #d8d8d8;
+  display: block;
+  height: 32px;
+  margin: 0 auto;
+  width: 50px;
+  position: relative;
+}
+
+/* line 140, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-status .status-box .box span {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: red;
+}
+
+/* line 147, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-status .status-box .box .box-0 {
+  background: #cdcecf;
+}
+
+/* line 148, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-status .status-box .box .box-1 {
+  background: #4c85b7;
+}
+
+/* line 149, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-status .status-box .box .box-2 {
+  background: #bc0008;
+}
+
+/* line 150, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-status .status-box .box .box-3 {
+  background: #568e31;
+}
+
+/* line 152, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.panel-head {
+  font-size: 16px;
+  margin: 0 -15px 8px;
+}
+
+/* line 156, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.col-result {
+  font-size: 16px;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+/* line 161, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-status {
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
+/* line 165, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-running {
+  color: #4c85b7;
+}
+
+/* line 168, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-rejected {
+  color: #bc0008;
+}
+
+/* line 171, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-complete {
+  color: #568e31;
+}
+
+/* line 174, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-accepted {
+  color: #fcbd25;
+}
+
+/* line 177, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-pending {
+  color: #cdcecf;
+}
+
+/* line 180, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-result {
+  font-size: 34px;
+}
+
+/* line 183, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.change-result.change-accepted {
+  color: #fcbd25;
+}
+
+/* line 187, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.pending-asset {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 192, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.pending-asset::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 97%;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.5);
+  content: '';
+}
+
+/* line 202, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-body {
+  width: 100%;
+  display: table;
+}
+
+/* line 206, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-body .modal-con-left {
+  width: 35%;
+  float: left;
+}
+
+/* line 210, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-body .modal-con-right {
+  width: 62%;
+  float: right;
+  font-size: 18px;
+}
+
+/* line 215, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-body .modal-con-right span {
+  width: 100%;
+  float: left;
+  margin: 8px 0;
+}
+
+/* line 220, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-body .modal-con-right span strong {
+  color: #000;
+}
+
+/* line 224, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-body .modal-con-right .block-result {
+  text-align: center;
+  font-size: 27px;
+  margin: 25px 0 0;
+}
+
+/* line 231, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-pending {
+  color: #cdcecf;
+}
+
+/* line 235, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-running {
+  color: #4c85b7;
+}
+
+/* line 239, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-rejected {
+  color: #bc0008;
+}
+
+/* line 243, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-complete {
+  color: #568e31;
+}
+
+/* line 247, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-accepted {
+  color: #669844;
+}
+
+/* line 251, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.modal-accepted .block-result {
+  color: #fcbd25;
+}
+
+/* line 256, G:/ANGULAR DEMOS/crossover/app/assets/scss/app.scss */
+.assets-item img {
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/*# sourceMappingURL=../css/app.map */

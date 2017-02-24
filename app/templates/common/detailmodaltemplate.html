@@ -1,0 +1,39 @@
+<script type="text/ng-template" id="modaltemplate.html">
+	<div class="modal-header">
+        <h3 class="modal-title" id="modal-title">
+        	<span >
+        		{{detTitle.title}} :
+        	</span>
+
+        	<span ng-if="modalitem.title == ''">
+        		{{modalitem.id}}
+        	</span>
+        	<span ng-if="modalitem.title != ''">
+        		{{modalitem.title}}
+        	</span>
+        </h3>
+    </div>
+    <div class="modal-body modal-{{modalitem.meta.state | lowercase}}" id="modal-body">
+        <div class="modal-con-left">
+        	<img ng-src="{{detTitle.img_url}}" class="img-responsive" />
+        </div>
+        <div class="modal-con-right">
+	        <span class="block-owner" ng-if="modalitem.owner != ''">
+	        	<strong>Owner:</strong> {{modalitem.owner}}
+	        </span>
+	        <span class="block-time" ng-if="modalitem.meta.time_started != ''">
+	        	<strong>Time Started:</strong> {{modalitem.meta.time_started}}
+	        </span>
+	        <span class="block-state" ng-if="modalitem.meta.state != ''">
+	        	<strong>State:</strong> {{modalitem.meta.state}}
+	        </span>
+	        <span class="block-result">
+	        	{{modalitem.meta.result}}
+	        </span>
+        </div>
+        
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
